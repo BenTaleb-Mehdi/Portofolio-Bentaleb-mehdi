@@ -1,0 +1,33 @@
+graph TD
+
+    %% Main Structure (Top to Bottom)
+    A[Home Page] --> B[About Section]
+    B --> B1[About Page]
+    B1 --> B2[Biography / Experience Details]
+
+    A --> C[Skills Section]
+    A --> D[Call to Action: View Projects]
+
+    D --> E[Projects Page]
+    E --> F[Project Details & GitHub Links]
+
+    A --> G[Contact Page]
+    E --> G
+    F --> G
+
+    G --> H[Form Submitted]
+    H --> I[Thank You / Success Message]
+
+    %% Navbar (Placed at the Top)
+    subgraph Navbar
+        N1[Home]
+        N2[About]
+        N3[Projects]
+        N4[Contact]
+    end
+
+    %% Position Links
+    N1 --> A
+    N2 --> B1
+    N3 --> E
+    N4 --> G
