@@ -1,33 +1,35 @@
-graph TD
+classDiagram
+    direction LR
 
-    %% Main Structure (Top to Bottom)
-    A[Home Page] --> B[About Section]
-    B --> B1[About Page]
-    B1 --> B2[Biography / Experience Details]
+    class Developer {
+        +int id
+        +string Fullname
+        +string title
+        +string bio hero
+        +string bio about
+        +string email
+        +string phone
+        +string profile_picture
+    }
 
-    A --> C[Skills Section]
-    A --> D[Call to Action: View Projects]
+    class Project {
+        +int id
+        +string title
+        +string description
+        +string Project Overview
+        +string Technologies Used
+        +string image
+        +string Duration
+        +string github_link
+        +string demo_link
 
-    D --> E[Projects Page]
-    E --> F[Project Details & GitHub Links]
+    }
 
-    A --> G[Contact Page]
-    E --> G
-    F --> G
+    class Technologies {
+        +int id
+        +string name
+    }
 
-    G --> H[Form Submitted]
-    H --> I[Thank You / Success Message]
-
-    %% Navbar (Placed at the Top)
-    subgraph Navbar
-        N1[Home]
-        N2[About]
-        N3[Projects]
-        N4[Contact]
-    end
-
-    %% Position Links
-    N1 --> A
-    N2 --> B1
-    N3 --> E
-    N4 --> G
+    %% Relationships
+    Developer "1" --> "" Project : has
+    Project "1" --> "" Technologies : uses

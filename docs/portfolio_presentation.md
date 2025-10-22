@@ -51,7 +51,16 @@ style: |
 ![Schema](imges/mermaid-diagram.png)
 
 ---
+ 
+## Conception: class diagram
+
+![diagram](imges/diagram-class.png)
+
+---
 
 ## Conception: Maquette
 
 ![Maquette](imges/Capture.png)
+
+
+
