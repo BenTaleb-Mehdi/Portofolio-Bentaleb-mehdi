@@ -1,71 +1,3 @@
-<<<<<<< HEAD
----
-marp: true
-theme: default
-paginate: true
-title: Developer Portfolio Mini-Site Analysis
-style: |
-  section {
-    background-color: #f5faff;
-    color: #003087;
-  }
-  h1, h2 {
-    color: #003087;
-  }
-  img {
-    max-height: 500px;
-     width: auto; 
-     object-fit: contain;
-  }
----
-
-# Developer Portfolio Mini-Site
-**Mallouli Abdelhay**  
-*Supervised by: M. Essarraj Fouad*  
-*Group: DM101*
-
----
-
-## Analysis: Requirements Specification
-- **Context**: Portfolio – Laravel 
-- **Objective**: Profile –  Projects – Contact
-- **For**: Aboumacha Mohamed Amine
-- **Users**: Recruiters – Clients – Students
-- **Pages**: Home – Projects – Details – About
-- **Design**: Clean – Responsive – blue and white for colors
-
----
-
-## Analysis: Example of an Inspiring Site
-
-![Inspiring Site](imges/imgex.png)
-
----
-
-## Analysis: Use Case Diagram
-![Use Case Diagram](imges/Uml.png)
-
----
-
-## Conception: Schema
-
-![Schema](imges/mermaid-diagram.png)
-
----
- 
-## Conception: class diagram
-
-![diagram](imges/diagram-class.png)
-
----
-
-## Conception: Maquette
-
-![Maquette](imges/Capture.png)
-
-
-
-=======
 ---
 marp: true
 theme: custom
@@ -208,4 +140,61 @@ section {
 ![Plan](imges/mermaid-diagram.png)
 
 ---
->>>>>>> 28c67f63399b7795701f55721a7bf3b56eef65b2
+=======
+---
+marp: true
+theme: default
+paginate: true
+title: Developer Portfolio Mini-Site Analysis
+style: |
+  section {
+    background-color: #f5faff;
+    color: #003087;
+  }
+  h1, h2 {
+    color: #003087;
+  }
+  img {
+    max-height: 500px;
+     width: auto; 
+     object-fit: contain;
+  }
+---
+
+# Developer Portfolio Mini-Site
+**Mallouli Abdelhay**  
+*Supervised by: M. Essarraj Fouad*  
+*Group: DM101*
+
+---
+
+## Analysis: Requirements Specification
+- **Context**: Portfolio – Laravel 
+- **Objective**: Profile –  Projects – Contact
+- **For**: Aboumacha Mohamed Amine
+- **Users**: Recruiters – Clients – Students
+- **Pages**: Home – Projects – Details – About
+- **Design**: Clean – Responsive – blue and white for colors
+
+---
+
+## Analysis: Example of an Inspiring Site
+
+![Inspiring Site](imges/imgex.png)
+
+---
+
+## Analysis: Use Case Diagram
+![Use Case Diagram](imges/Uml.png)
+
+---
+
+## Conception: Schema
+
+![Schema](imges/mermaid-diagram.png)
+
+---
+
+## Conception: Maquette
+
+![Maquette](imges/Capture.png)
