@@ -96,73 +96,10 @@ section {
 }
 </style>
 
-# Portfolio Developer
 
-**By Mehdi Bentaleb**
-
----
-
-## Requirements Specification
-
-- **Client**: Mohamed Ouallou
-- **Project**: Mini-site “Developer Portfolio”
-- **Objective**: Showcase Profile, Projects, and Contact Information
-- **Pages**:
-  - Home
-  - About
-  - Projects
-  - Contact
-- **Users**:
-  - Students
-  - Clients
-  - HR
-- **Technologies**: Laravel + Services
-- **Design**: Responsive & Clean
-
----
-
-## Capture Portfolio
-
-![Portfolio Capture](imges/Capture.png)
-
----
-
-<!-- _class: use-case -->
-
-## Use Case Diagram
-
-![Use Case Diagram](imges/UML.png)
-
----
-
-## Plan
-
-![Plan](imges/mermaid-diagram.png)
-
----
-=======
----
-marp: true
-theme: default
-paginate: true
-title: Developer Portfolio Mini-Site Analysis
-style: |
-  section {
-    background-color: #f5faff;
-    color: #003087;
-  }
-  h1, h2 {
-    color: #003087;
-  }
-  img {
-    max-height: 500px;
-     width: auto; 
-     object-fit: contain;
-  }
----
 
 # Developer Portfolio Mini-Site
-**Mallouli Abdelhay**  
+**Mehdi Bentaleb**  
 *Supervised by: M. Essarraj Fouad*  
 *Group: DM101*
 
@@ -170,11 +107,11 @@ style: |
 
 ## Analysis: Requirements Specification
 - **Context**: Portfolio – Laravel 
-- **Objective**: Profile –  Projects – Contact
-- **For**: Aboumacha Mohamed Amine
+- **Objective**: Profile –  Projects 
+- **For**: mohamed Ouellou
 - **Users**: Recruiters – Clients – Students
 - **Pages**: Home – Projects – Details – About
-- **Design**: Clean – Responsive – blue and white for colors
+- **Design**: Clean – Responsive 
 
 ---
 
@@ -192,6 +129,12 @@ style: |
 ## Conception: Schema
 
 ![Schema](imges/mermaid-diagram.png)
+
+---
+
+## Conception: diagramme class
+
+![Schema](imges/diagram-class.png)
 
 ---
 
