@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Mehdy Bentaleb</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      #loader {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        z-index: 9999;
+        opacity: 1;
+        transition: opacity 0.6s ease;
+      }
+      .loader {
+        border: 4px solid #e0e0e0;
+        border-top: 4px solid #007bff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease;
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .project-card {
+        transition: all 0.3s ease;
+      }
+      .active-filter {
+        background: linear-gradient(to right, #3b82f6, #7c3aed);
+        color: white;
+      }
+    </style>
+</head>
+<body class="bg-white text-gray-800 transition-colors duration-300">
+    <!-- Loading Screen -->
+    <div id="loader">
+      <div class="loader"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full top-0 z-40 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="home.html" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    MB
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                    <a href="about.html" class="hover:text-blue-600 transition">About</a>
+                    <a href="projects.html" class="text-blue-600 font-semibold">Projects</a>
+                    <a href="skills.html" class="hover:text-blue-600 transition">Skills</a>
+                    <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <a href="index.html" class="block py-2 hover:text-blue-600 transition">Home</a>
+                <a href="about.html" class="block py-2 hover:text-blue-600 transition">About</a>
+                <a href="projects.html" class="block py-2 text-blue-600 font-semibold">Projects</a>
+                <a href="skills.html" class="block py-2 hover:text-blue-600 transition">Skills</a>
+                <a href="contact.html" class="block py-2 hover:text-blue-600 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section class="pt-32 pb-20 min-h-screen bg-gray-50">
+        <div class="container mx-auto px-6">
+            <!-- Page Title -->
+            <div class="text-center mb-16 reveal">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4">
+                    My <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Projects</span>
+                </h1>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    A collection of my recent work showcasing web development, design, and creative solutions.
+                </p>
+            </div>
+
+
+
+             <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="project-card reveal bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+            data-category="web"
+          >
+            <div class="relative overflow-hidden group">
+              <div
+                class="aspect-video bg-gradient-to-br from-blue-200 to-purple-200 flex items-center justify-center"
+              >
+                          <img src="Images/coffeWebsite.png" alt="E-Commerce Platform"
+                          class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+              >
+                <a
+                  href="#"
+                  class="text-white font-semibold hover:text-blue-300 transition"
+                >
+                  View Project <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">E-Commerce Platform</h3>
+              <p class="text-gray-600 mb-4">
+                A full-featured online shopping platform with cart and payment
+                integration.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+                  >HTML</span
+                >
+                <span
+                  class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm"
+                  >CSS</span
+                >
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+                  >JavaScript</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="project-card reveal bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+            data-category="design"
+          >
+            <div class="relative overflow-hidden group">
+              <div
+                class="aspect-video bg-gradient-to-br from-blue-200 to-purple-200 flex items-center justify-center"
+              >
+               <img src="Images/dashboard.png" alt="E-Commerce Platform"
+                          class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+              >
+                <a
+                  href="#"
+                  class="text-white font-semibold hover:text-blue-300 transition"
+                >
+                  View Project <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+              <p class="text-gray-600 mb-4">
+                Modern and creative portfolio design for a digital artist.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+                  >Figma</span
+                >
+                <span
+                  class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm"
+                  >UI/UX</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="project-card reveal bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+            data-category="web"
+          >
+            <div class="relative overflow-hidden group">
+              <div
+                class="aspect-video bg-gradient-to-br from-blue-200 to-purple-200 flex items-center justify-center"
+              >
+                <img src="Images/portfolio.png" alt="E-Commerce Platform"
+                          class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+              >
+                <a
+                  href="#"
+                  class="text-white font-semibold hover:text-blue-300 transition"
+                >
+                  View Project <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Dashboard Analytics</h3>
+              <p class="text-gray-600 mb-4">
+                Interactive dashboard with real-time data visualization and
+                charts.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm"
+                  >Chart.js</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="project-card reveal bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+            data-category="mobile"
+          >
+            <div class="relative overflow-hidden group">
+              <div
+                class="aspect-video bg-gradient-to-br from-blue-200 to-purple-200 flex items-center justify-center"
+              >
+                <img src="Images/websiteapple.png" alt="E-Commerce Platform"
+                          class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+              >
+                <a
+                  href="#"
+                  class="text-white font-semibold hover:text-blue-300 transition"
+                >
+                  View Project <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Fitness Tracker App</h3>
+              <p class="text-gray-600 mb-4">
+                Mobile app UI design for tracking workouts and nutrition.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+                  >React Native</span
+                >
+                <span
+                  class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm"
+                  >Mobile</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div
+            class="project-card reveal bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+            data-category="web"
+          >
+            <div class="relative overflow-hidden group">
+              <div
+                class="aspect-video bg-gradient-to-br from-blue-200 to-purple-200 flex items-center justify-center"
+              >
+                <img src="Images/websitenike.png" alt="E-Commerce Platform"
+                          class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+              >
+                <a
+                  href="#"
+                  class="text-white font-semibold hover:text-blue-300 transition"
+                >
+                  View Project <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Blog Platform</h3>
+              <p class="text-gray-600 mb-4">
+                Clean and minimalist blogging platform with CMS integration.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+                  >PHP</span
+                >
+                <span
+                  class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm"
+                  >MySQL</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div
+            class="project-card reveal bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300"
+            data-category="design"
+          >
+            <div class="relative overflow-hidden group">
+              <div
+                class="aspect-video bg-gradient-to-br from-blue-200 to-purple-200 flex items-center justify-center"
+              >
+                <img src="Images/coffeWebsite.png" alt="E-Commerce Platform"
+                          class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+              </div>
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6"
+              >
+                <a
+                  href="#"
+                  class="text-white font-semibold hover:text-blue-300 transition"
+                >
+                  View Project <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Fashion Store Design</h3>
+              <p class="text-gray-600 mb-4">
+                Elegant e-commerce design with focus on user experience.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-blue-100 text-blue-600 rounded-full text-sm"
+                  >Adobe XD</span
+                >
+                <span
+                  class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-sm"
+                  >Tailwind</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 transition">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+                <a href="mailto:mehdy@example.com" class="text-gray-600 hover:text-blue-600 transition">
+                    <i class="fas fa-envelope text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-gray-600">© 2025 Mehdy Bentaleb. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+      // Loader fade-out
+      window.addEventListener("load", () => {
+        const loader = document.getElementById("loader");
+        loader.style.opacity = "0";
+        setTimeout(() => loader.style.display = "none", 600);
+      });
+
+      // Reveal animation on scroll
+      window.addEventListener("scroll", () => {
+        document.querySelectorAll(".reveal").forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            el.classList.add("active");
+          }
+        });
+      });
+
+      // Mobile menu
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Filter projects
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const projectCards = document.querySelectorAll(".project-card");
+
+      filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          const filter = button.getAttribute("data-filter");
+
+          // Update active filter button
+          filterButtons.forEach(btn => btn.classList.remove("active-filter"));
+          button.classList.add("active-filter");
+
+          // Filter projects
+          projectCards.forEach(card => {
+            const category = card.getAttribute("data-category");
+            if (filter === "all" || category === filter) {
+              card.style.display = "block";
+              card.classList.add("reveal");
+              setTimeout(() => card.classList.add("active"), 100);
+            } else {
+              card.style.display = "none";
+              card.classList.remove("active");
+            }
+          });
+        });
+      });
+    </script>
+</body>
+</html>

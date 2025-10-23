@@ -1,0 +1,35 @@
+classDiagram
+    direction LR
+
+    class Developer {
+        +int id
+        +string Fullname
+        +string title
+        +string bio hero
+        +string bio about
+        +string email
+        +string phone
+        +string profile_picture
+    }
+
+    class Project {
+        +int id
+        +string title
+        +string description
+        +string Project Overview
+        +string Technologies Used
+        +string image
+        +string Duration
+        +string github_link
+        +string demo_link
+
+    }
+
+    class Technologies {
+        +int id
+        +string name
+    }
+
+    %% Relationships
+    Developer "1" --> "" Project : has
+    Project "1" --> "" Technologies : uses
